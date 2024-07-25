@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Country</title>
+  </head>
+  <body>
+    <form name="signupForm" onsubmit="return validate()" method="post">
+      <fieldset>
+        <label for="username">Username</label>
+        <input name="username" id="name" type="text" /><br /><br />
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password" /><br /><br />
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Nepal">Nepal</option>
+          <option value="Not Nepal">Not Nepal</option></select
+        ><br /><br />
+        <label for="gender">Gender</label>
+        <input name="gender" id="male" type="radio" />M
+        <input name="gender" id="female" type="radio" />F<br /><br />
+        <input id="submit" type="submit" value="Submit" />
+        <br />
+      </fieldset>
+    </form>
+
+    <script>
+      function validate() {
+        var name = document.getElementById("name").value;
+        var country = document.getElementById("country").value;
+        var password = document.getElementById("password").value;
+        var male = document.getElementById("male").checked;
+        var female = document.getElementById("female").checked;
+        var gender = male || female;
+
+        if (name.length < 4) {
+          alert("Username length must be > 4");
+          return false;
+        }
+
+        if (!password.match(/^[A-Za-z].*#$/)) {
+          alert("Password must start with character and end with #");
+          return false;
+        }
+
+        if (country == "") {
+          alert("Please select country");
+          return false;
+        }
+
+        if (!gender) {
+          alert("Please select gender");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

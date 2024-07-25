@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MediaQuery</title>
+    <style>
+      .column {
+        float: left;
+        width: 25%;
+      }
+
+      @media screen and (max-width: 900px) {
+        .column {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Responsive Column Layout using Media Query</h2>
+    <div class="column">
+      <h2>Column 1</h2>
+    </div>
+
+    <div class="column">
+      <h2>Column 2</h2>
+    </div>
+
+    <div class="column">
+      <h2>Column 3</h2>
+    </div>
+
+    <div class="column">
+      <h2>Column 4</h2>
+    </div>
+  </body>
+</html>

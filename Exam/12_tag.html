@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Tag</title>
+  </head>
+  <body>
+    <div id="hello">Hello World</div>
+    <ul>
+      <li>Cricket</li>
+      <li>Football</li>
+    </ul>
+    <script>
+      var hello = document.getElementById("hello");
+      hello.innerHTML = "Hey World!";
+      var sports = document.getElementsByTagName("li");
+      sports[0].innerHTML = "Baseball";
+      sports[1].innerHTML = "Soccer";
+    </script>
+  </body>
+</html>

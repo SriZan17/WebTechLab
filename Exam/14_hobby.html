@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hobby</title>
+  </head>
+  <body>
+    <form name="signupForm" onsubmit="return validate()" method="post">
+      <fieldset>
+        <label for="name">Username</label>
+        <input id="name" type="text" name="name" /><br />
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" /><br />
+        <label for="hobby">Hobby</label>
+        <input id="soccer" name="hobby" type="checkbox" value="soccer" />Soccer
+        <input
+          id="cricket"
+          name="hobby"
+          type="checkbox"
+          value="cricket"
+        />Cricket<br />
+        <input id="submit" type="submit" value="submit" />
+      </fieldset>
+    </form>
+    <script>
+      function validate() {
+        var username = document.getElementById("name").value;
+        if (username.length < 0 || username == "") {
+          alert("Username cannot be empty");
+          return false;
+        }
+
+        var password = document.getElementById("password").value;
+        if (password.length < 5) {
+          alert("Password length must be atleat 5");
+          return false;
+        }
+
+        var soccer = document.getElementById("soccer").checked;
+        var cricket = document.getElementById("cricket").checked;
+        if (!soccer && !cricket) {
+          alert("Pleasse select a hobby");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

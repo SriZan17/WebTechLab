@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <div id="passwordDiv">
+      <input type="password" id="passwordInput" />
+    </div>
+    <div id="confirmPasswordDiv">
+      <input type="password" id="confirmPasswordInput" />
+    </div>
+    <div id="messageDiv" style="height: 50px"></div>
+    <script>
+      var passwordInput = document.getElementById("passwordInput");
+      var confirmPasswordInput = document.getElementById(
+        "confirmPasswordInput"
+      );
+      passwordInput.addEventListener("input", changeColor);
+      confirmPasswordInput.addEventListener("input", changeColor);
+      function changeColor() {
+        if (passwordInput.value === confirmPasswordInput.value) {
+          document.getElementById("messageDiv").style.backgroundColor =
+            "lightgreen";
+        } else {
+          document.getElementById("messageDiv").style.backgroundColor = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

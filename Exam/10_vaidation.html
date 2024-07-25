@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup Form Validation</title>
+    <script>
+      function validateForm() {
+        var name = document.forms["signupForm"]["name"].value;
+        if (name == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+
+        var email = document.forms["signupForm"]["email"].value;
+        var emailPattern = /\S+@\S+\.\S+/;
+        if (email == "" || !emailPattern.test(email)) {
+          alert("Invalid email address");
+          return false;
+        }
+
+        var password = document.forms["signupForm"]["password"].value;
+        var passwordPattern = /^[A-Za-z].*\d$/;
+        if (password.length < 6 || !passwordPattern.test(password)) {
+          alert(
+            "Password must be at least 6 characters long, start with an alphabet, and end with a digit"
+          );
+          return false;
+        }
+
+        var age = document.forms["signupForm"]["age"].value;
+        if (age < 8 || age > 60) {
+          alert("Age must be between 8 and 60");
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Signup Form</h2>
+    <form name="signupForm" onsubmit="return validateForm()" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" /><br />
+      <label for="age">Age:</label><br />
+      <input type="number" id="age" name="age" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

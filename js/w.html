@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <div id="buttonContainer"></div>
+    <script>
+      var container = document.getElementById("buttonContainer");
+      for (var i = 1; i <= 3; i++) {
+        var button = document.createElement("button");
+        button.innerHTML = "Button " + i;
+        button.onclick = (function (num) {
+          return function () {
+            alert("You pressed button " + num);
+          };
+        })(i);
+        container.appendChild(button);
+      }
+    </script>
+  </body>
+</html>

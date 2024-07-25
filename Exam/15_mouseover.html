@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TU</title>
+  </head>
+
+  <body>
+    <img
+      src="images/tu.jpg"
+      onmouseover="changeText()"
+      onmouseout="defaulttext()"
+    />
+    <p id="description">Hello</p>
+    <script>
+      function changeText() {
+        var hello = document.getElementById("description");
+        hello.innerHTML = "Hello World";
+      }
+
+      function defaulttext() {
+        var defa = document.getElementById("description");
+        defa.innerHTML = "Hello";
+      }
+    </script>
+  </body>
+</html>

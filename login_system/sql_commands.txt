@@ -1,0 +1,19 @@
+mysql-u root
+
+CREATE DATABASE sms_30077;
+
+USE sms_30077;
+
+CREATE TABLE student(sid int auto_increment primary key,sname varchar(30) not null,address varchar(30) not null,contact varchar(10),gender enum('male','female','other') not null, email varchar(30) not null unique, password varchar(255) not null, online_status bit not null default 0);
+
+CREATE TABLE admins(aid INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(30) NOT NULL, password VARCHAR(255) NOT NULL, online_status bit NOT NULL DEFAULT 0);
+
+INSERT INTO admins(email, password) VALUES ('admin@test.com', '71aec223ecbb2699e695e5ec9ffc0f8cfb9a9682');
+
+INSERT INTO student(sname, contact, address, email, password)
+VALUES
+('John Doe', '+1234567890', '123 Main Street, Cityville, USA', 'john.doe@example.com', 'password123'),
+('Jane Smith', '+1987654321', '456 Oak Avenue, Townsville, USA', 'jane.smith@example.com', 'securepass456'),
+('Michael Johnson', NULL, '789 Elm Road, Villagetown, USA', 'michael.j@example.com', 'mjpass789'),
+('Emily Brown', '+1122334455', '321 Pine Lane, Hamletville, USA', 'emily.b@example.com', 'pass1234'),
+('David Lee', '+1555666777', '987 Cedar Street, Suburbia, USA', 'david.lee@example.com', 'dlee789!');
