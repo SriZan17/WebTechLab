@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid #333;
+  padding: 20px;
+  height: 2000px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.static {
+  background-color: gold;
+}
+
+.relative {
+  background-color: orange;
+  position: relative;
+  left: 250px;
+  top: 250px;
+}
+
+.absolute {
+  background-color: red;
+  position: absolute;
+  right: 500px;
+  top: 500px;
+}
+
+.fixed {
+  background-color: cyan;
+  position: fixed;
+  bottom: 400px;
+  right: 600px;
+}
+
+.sticky {
+  background-color: blue;
+  position: sticky;
+  top: 70px;
+}
+
+.spacer {
+  height: 2000px;
+}

@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+.box {
+  width: 30%;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+.box1 {
+  background-color: gold;
+  float: left;
+}
+.box2 {
+  background-color: gray;
+  float: left;
+}
+.box3 {
+  background-color: red;
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+.after-clear {
+  background-color: lightseagreen;
+  padding: 10px;
+  text-align: center;
+}

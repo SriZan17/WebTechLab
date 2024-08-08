@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Example</title>
+    <link rel="stylesheet" href="9.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        color: blue;
+      }
+
+      #myId {
+        color: green;
+      }
+
+      .myClass {
+        color: red;
+      }
+
+      [type="text"] {
+        color: purple;
+      }
+
+      a:hover {
+        color: orange;
+      }
+
+      p::first-line {
+        color: brown;
+      }
+
+      div p {
+        font-weight: bold;
+      }
+
+      div > p {
+        text-decoration: underline;
+      }
+
+      h1 + p {
+        font-style: italic;
+      }
+
+      h1 ~ p {
+        background-color: lightgrey;
+      }
+
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="font-size: 20px">This is a paragraph with inline CSS.</p>
+
+    <p id="myId">This paragraph is selected by ID.</p>
+
+    <p class="myClass">This paragraph is selected by class.</p>
+
+    <input type="text" placeholder="Text input selected by attribute" />
+
+    <a href="#">Hover over this link</a>
+
+    <p>This paragraph uses a pseudo-element to style the first line.</p>
+
+    <div>
+      <p>This paragraph is a descendant of a div.</p>
+    </div>
+
+    <div>
+      <p>This paragraph is a child of a div.</p>
+      <span>This span is also a child of the same div.</span>
+    </div>
+
+    <h1>Heading 1</h1>
+    <p>This paragraph is adjacent to the h1.</p>
+
+    <h1>Heading 2</h1>
+    <p>This paragraph is a general sibling of the h1.</p>
+    <p>Another sibling paragraph of the h1.</p>
+
+    <h1>Grouped Selector H1</h1>
+    <h2>Grouped Selector H2</h2>
+    <h3>Grouped Selector H3</h3>
+  </body>
+</html>

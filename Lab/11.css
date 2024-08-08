@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text-example {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.font-family {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.font-size {
+  font-size: 1.5em;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+.font-style {
+  font-style: italic;
+}
+
+.text-color {
+  color: red;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.text-decoration {
+  text-decoration: underline;
+}
+
+.line-height {
+  line-height: 1.8;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
